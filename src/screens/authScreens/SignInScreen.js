@@ -7,15 +7,14 @@ import {
     Dimensions, 
     TextInput
 } from "react-native";
-import { Icon } from "react-native-elements";
+import { Icon, Button, SocialIcon } from "react-native-elements";
 import * as Animatable from "react-native-animatable"
 
 import { 
     colors, 
     parameters, 
     titles, 
-    fontSizes,
-    fontWeights 
+    fonts
 } from "../../global/style";
 import Header from "../../components/Header";
 export default function SignInScreen(){
@@ -29,11 +28,11 @@ export default function SignInScreen(){
             <View style={{marginLeft: 20, marginTop: 10}}>
                 <Text style={titles}>Sign In</Text>
             </View>
-            <View style={{ alignItems: 'center', marginTop: 10}}>
+            <View style={{ alignItems: 'center', marginTop: 20}}>
                 <Text style={styles.text1}>Please enter the email and password</Text>
                 <Text style={styles.text1}>register with your account</Text>
             </View>
-            <View style={{marginTop: 20}}>
+            <View style={{marginTop: 40}}>
                 <View>
                     <TextInput 
                         style={styles.textInput1}
@@ -72,6 +71,60 @@ export default function SignInScreen(){
                     </Animatable.View>
                 </View>
             </View>
+            <View style={{ marginHorizontal: 20, marginTop: 30}}>
+                <Button
+                    title={'SIGN IN'}
+                    buttonStyle ={parameters.buttonStyle}
+                    titleStyle ={parameters.buttonTitleStyle}
+                />
+            </View>
+            <View style={{ alignItems: 'center', marginTop: 15}}> 
+                <Text style={{
+                    ...styles.text1, 
+                    textDecorationLine: 'underline'
+                }}>Forgot Password?</Text>
+            </View>
+            <View style={{
+                flexDirection: "row",
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginHorizontal: 30,
+                marginTop: 30
+             }}>
+                <View style={styles.view1}></View>
+                <Text style={styles.text2}>OR</Text>
+                <View style={styles.view1}></View>
+            </View>
+            <View style={{marginHorizontal: 10, marginTop: 20}}>
+                <SocialIcon
+                    title="Sign in with Facebook"
+                    button
+                    type="facebook"
+                    style={styles.SocialIcon}
+                    onPress={() => {}}
+                />
+                <SocialIcon
+                    title="Sign in with Google"
+                    button
+                    type="google"
+                    style={styles.SocialIcon}
+                    onPress={() => {}}
+                />
+            </View>
+            <View style={{marginLeft: 20, marginTop: 10}}> 
+                <Text style={{
+                    ...styles.text1, 
+                    textDecorationLine: 'underline'
+                }}>New on PhunFood?</Text>
+            </View>
+            <View style={{alignItems: 'flex-end', marginHorizontal: 20, marginTop: 10}}>
+                <Button 
+                    title={"Create an account"}
+                    buttonStyle={styles.createButton}
+                    titleStyle={styles.createButtonTitle}
+                />
+            </View>
+
         </View>
     )
 }
@@ -81,8 +134,13 @@ const styles = StyleSheet.create({
     },
     text1: {
         color: colors.grey3,
-        fontSize: fontSizes.s8,
-        fontWeight: fontWeights.w1
+        fontSize: fonts.fontSizes.s8,
+        fontWeight: fonts.fontWeights.w1
+    },
+    text2: {
+        color: colors.grey1,
+        fontSize: fonts.fontSizes.s7,
+        fontWeight: fonts.fontWeights.w7
     },
     textInput1:{
         borderWidth:1,
@@ -103,5 +161,33 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingLeft:16
     },
+    view1: {
+        height: 0.5,
+        backgroundColor: colors.grey3,
+        flex: 1,
+        marginHorizontal: 20
+    },
+    SocialIcon: {
+        borderRadius: 12,
+        height: 50
+    },
+    createButton: {
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 17,
+        borderWidth: 1,
+        borderColor: colors.button,
+        height: 40,
+        paddingHorizontal: 20,
+    },
+    createButtonTitle: {
+        color: colors.button,
+        fontSize: fonts.fontSizes.s8,
+        fontWeight: fonts.fontWeights.w7,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: -3
+    }
 
 })
