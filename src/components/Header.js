@@ -3,7 +3,7 @@ import { colors, parameters } from "../global/style";
 import { Icon } from "react-native-elements";
 
 import { View, Text, StyleSheet, Dimensions } from "react-native";
-export default function Header({title}){
+export default function Header({title, type}){
     return(
         <View style={style.header}>
             <View style={{
@@ -11,7 +11,7 @@ export default function Header({title}){
             }}>
                 <Icon
                     type="material-community"
-                    name="arrow-left"
+                    name= {type}
                     color={colors.headerText}
                     size={28}
                     onPress={()=>{}}
