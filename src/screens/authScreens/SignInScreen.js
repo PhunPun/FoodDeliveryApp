@@ -17,14 +17,14 @@ import {
     fonts
 } from "../../global/style";
 import Header from "../../components/Header";
-export default function SignInScreen(){
+export default function SignInScreen({navigation}){
     const [textInput2Fossuse, setTextInput2Fossuse] = useState(false)
 
     const textInput1 = useRef(1)
     const textInput2 = useRef(2)
     return(
         <View style={styles.container}>
-            <Header title={'My account'} type={'arrow-left'}/>
+            <Header title={'My account'} type={'arrow-left'} navigation={navigation}/>
             <View style={{marginLeft: 20, marginTop: 10}}>
                 <Text style={titles}>Sign In</Text>
             </View>

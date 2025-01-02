@@ -4,6 +4,7 @@ import { colors } from "./src/global/style";
 
 import SignInScreen from "./src/screens/authScreens/SignInScreen";
 import SignInWelcomeScreen from "./src/screens/authScreens/SignInWelcomeScreen";
+import RootNavigator from "./src/navigation/RootNavigator";
 export default function App(){
     return (
         <View style={style.container}>
@@ -11,7 +12,7 @@ export default function App(){
                 barStyle={'light-content'}
                 backgroundColor={colors.statusBar}
             />
-            <SignInWelcomeScreen/>
+            <RootNavigator/>
         </View>
     )
 }

@@ -19,7 +19,7 @@ import {
 } from "../../global/style";
 import { images } from "../../global/constants";
 
-export default function SignInWelcomeScreen() {
+export default function SignInWelcomeScreen({navigation}) {
   return (
     <View style={{flex: 1}}>
       <View style={styles.view1}>
@@ -51,6 +51,9 @@ export default function SignInWelcomeScreen() {
                 title={'SIGN IN'}
                 buttonStyle ={parameters.buttonStyle}
                 titleStyle ={parameters.buttonTitleStyle}
+                onPress={() => {
+                  navigation.navigate("SignInScreen")
+                }}
             />
         </View>
         <View style={{marginHorizontal: 20, marginTop: 10}}>
