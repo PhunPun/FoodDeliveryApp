@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useRef } from "react";
 import { 
     View, 
     Text, 
@@ -18,6 +19,10 @@ import {
 } from "../../global/style";
 import Header from "../../components/Header";
 export default function SignInScreen(){
+    const [textInput2Fossuse, setTextInput2Fossuse] = useState(false)
+
+    const textInput1 = useRef(1)
+    const textInput2 = useRef(2)
     return(
         <View style={styles.container}>
             <Header title={'My account'} type={'arrow-left'}/>
@@ -33,10 +38,12 @@ export default function SignInScreen(){
                     <TextInput 
                         style={styles.textInput1}
                         placeholder="Email"
+                        ref={textInput1}
                     />
                 </View>
                 <View style={styles.textInput2}>
-                    <Animatable.View>
+                    <Animatable.View animation={textInput2Fossuse ? "": "fadeInLeft"} 
+                            duration={400}>
                         <Icon 
                             name ={'lock'}
                             iconStyle={{color: colors.grey3}}
@@ -44,10 +51,18 @@ export default function SignInScreen(){
                         />
                     </Animatable.View>
                     <TextInput
-                        style={{width: '80%'}} 
+                        style={{flex: 1}} 
                         placeholder="Password"
+                        ref={textInput2}
+                        onFocus={() => {
+                            setTextInput2Fossuse(false)
+                        }}
+                        onBlur={() => {
+                            setTextInput2Fossuse(true)
+                        }}
                     />
-                    <Animatable.View>
+                    <Animatable.View animation={textInput2Fossuse ? "": "fadeInLeft"} 
+                                duration={400}>
                         <Icon 
                             name ={"visibility-off"}
                             iconStyle={{color: colors.grey3}}
