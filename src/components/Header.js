@@ -26,7 +26,7 @@ export default function Header({title, type, navigation}){
 const style = StyleSheet.create({
     header: {
         flexDirection: 'row',
-        backgroundColor: colors.button,
+        backgroundColor: colors.header,
         height: parameters.headerHeight
     },
     headerText: {

@@ -10,7 +10,9 @@ export const colors ={
     cardbackground: 'white',
     statusBar: '#ff8c52',
     headerText: 'white',
-    primary: '#ff8c52'
+    primary: '#ff8c52',
+    header: '#ff8c52',
+    nomal: 'white'
 }
 export const fonts ={
     fontSizes: {
