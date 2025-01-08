@@ -18,31 +18,29 @@ import { colors, fonts, parameters } from "../global/style";
 
 export default function HomeHeader(){
     const BadgeIcon = withBadge(0)(Icon)
-    return(
-        <View style={styles.header}>
-            <View style={styles.view1}>
-                <Icon 
-                    type="material-community"
-                    name="menu"
-                    color={colors.nomal}
-                    size={32}
-                />
-            </View>
-            <View style={styles.view2}>
-                <Text style={styles.text1}>
-                    PhunFood
-                </Text>
-            </View>
-            <View style={styles.view1}>
-                <BadgeIcon
-                    type="material-community"
-                    name="cart"
-                    size={32}
-                    color={colors.cardbackground}
-                />
-            </View>
+    return (
+      <View style={styles.header}>
+        <View style={styles.view1}>
+          <Icon
+            type="material-community"
+            name="menu"
+            color={colors.nomal}
+            size={32}
+          />
         </View>
-    )
+        <View style={styles.view2}>
+          <Text style={styles.text1}>PhunFood</Text>
+        </View>
+        <View style={styles.view1}>
+          <BadgeIcon
+            type="material-community"
+            name="cart"
+            size={32}
+            color={colors.cardbackground}
+          />
+        </View>
+      </View>
+    );
 }
 
 const styles = StyleSheet.create({

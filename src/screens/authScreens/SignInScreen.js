@@ -22,112 +22,125 @@ export default function SignInScreen({navigation}){
 
     const textInput1 = useRef(1)
     const textInput2 = useRef(2)
-    return(
-        <View style={styles.container}>
-            <Header title={'My account'} type={'arrow-left'} navigation={navigation}/>
-            <View style={{marginLeft: 20, marginTop: 10}}>
-                <Text style={titles}>Sign In</Text>
-            </View>
-            <View style={{ alignItems: 'center', marginTop: 20}}>
-                <Text style={styles.text1}>Please enter the email and password</Text>
-                <Text style={styles.text1}>register with your account</Text>
-            </View>
-            <View style={{marginTop: 40}}>
-                <View>
-                    <TextInput 
-                        style={styles.textInput1}
-                        placeholder="Email"
-                        ref={textInput1}
-                    />
-                </View>
-                <View style={styles.textInput2}>
-                    <Animatable.View animation={textInput2Fossuse ? "": "fadeInLeft"} 
-                            duration={400}>
-                        <Icon 
-                            name ={'lock'}
-                            iconStyle={{color: colors.grey3}}
-                            type="material"
-                        />
-                    </Animatable.View>
-                    <TextInput
-                        style={{flex: 1}} 
-                        placeholder="Password"
-                        ref={textInput2}
-                        onFocus={() => {
-                            setTextInput2Fossuse(false)
-                        }}
-                        onBlur={() => {
-                            setTextInput2Fossuse(true)
-                        }}
-                    />
-                    <Animatable.View animation={textInput2Fossuse ? "": "fadeInLeft"} 
-                                duration={400}>
-                        <Icon 
-                            name ={"visibility-off"}
-                            iconStyle={{color: colors.grey3}}
-                            type="material"
-                            style={{marginRight: 10}}
-                        />
-                    </Animatable.View>
-                </View>
-            </View>
-            <View style={{ marginHorizontal: 20, marginTop: 30}}>
-                <Button
-                    title={'SIGN IN'}
-                    buttonStyle ={parameters.buttonStyle}
-                    titleStyle ={parameters.buttonTitleStyle}
-                    onPress={()=> navigation.navigate('HomeScreen')}
-                />
-            </View>
-            <View style={{ alignItems: 'center', marginTop: 15}}> 
-                <Text style={{
-                    ...styles.text1, 
-                    textDecorationLine: 'underline'
-                }}>Forgot Password?</Text>
-            </View>
-            <View style={{
-                flexDirection: "row",
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginHorizontal: 30,
-                marginTop: 30
-             }}>
-                <View style={styles.view1}></View>
-                <Text style={styles.text2}>OR</Text>
-                <View style={styles.view1}></View>
-            </View>
-            <View style={{marginHorizontal: 10, marginTop: 20}}>
-                <SocialIcon
-                    title="Sign in with Facebook"
-                    button
-                    type="facebook"
-                    style={styles.SocialIcon}
-                    onPress={() => {}}
-                />
-                <SocialIcon
-                    title="Sign in with Google"
-                    button
-                    type="google"
-                    style={styles.SocialIcon}
-                    onPress={() => {}}
-                />
-            </View>
-            <View style={{marginLeft: 20, marginTop: 10}}> 
-                <Text style={{
-                    ...styles.text1, 
-                    textDecorationLine: 'underline'
-                }}>New on PhunFood?</Text>
-            </View>
-            <View style={{alignItems: 'flex-end', marginHorizontal: 20, marginTop: 10}}>
-                <Button 
-                    title={"Create an account"}
-                    buttonStyle={styles.createButton}
-                    titleStyle={styles.createButtonTitle}
-                />
-            </View>
-
+    return (
+      <View style={styles.container}>
+        <Header
+          title={'My account'}
+          type={'arrow-left'}
+          navigation={navigation}
+        />
+        <View style={{marginLeft: 20, marginTop: 10}}>
+          <Text style={titles}>Sign In</Text>
         </View>
-    )
+        <View style={{alignItems: 'center', marginTop: 20}}>
+          <Text style={styles.text1}>Please enter the email and password</Text>
+          <Text style={styles.text1}>register with your account</Text>
+        </View>
+        <View style={{marginTop: 40}}>
+          <View>
+            <TextInput
+              style={styles.textInput1}
+              placeholder="Email"
+              ref={textInput1}
+            />
+          </View>
+          <View style={styles.textInput2}>
+            <Animatable.View
+              animation={textInput2Fossuse ? '' : 'fadeInLeft'}
+              duration={400}>
+              <Icon
+                name={'lock'}
+                iconStyle={{color: colors.grey3}}
+                type="material"
+              />
+            </Animatable.View>
+            <TextInput
+              style={{flex: 1}}
+              placeholder="Password"
+              ref={textInput2}
+              onFocus={() => {
+                setTextInput2Fossuse(false);
+              }}
+              onBlur={() => {
+                setTextInput2Fossuse(true);
+              }}
+            />
+            <Animatable.View
+              animation={textInput2Fossuse ? '' : 'fadeInLeft'}
+              duration={400}>
+              <Icon
+                name={'visibility-off'}
+                iconStyle={{color: colors.grey3}}
+                type="material"
+                style={{marginRight: 10}}
+              />
+            </Animatable.View>
+          </View>
+        </View>
+        <View style={{marginHorizontal: 20, marginTop: 30}}>
+          <Button
+            title={'SIGN IN'}
+            buttonStyle={parameters.buttonStyle}
+            titleStyle={parameters.buttonTitleStyle}
+            onPress={() => navigation.navigate('HomeScreen')}
+          />
+        </View>
+        <View style={{alignItems: 'center', marginTop: 15}}>
+          <Text
+            style={{
+              ...styles.text1,
+              textDecorationLine: 'underline',
+            }}>
+            Forgot Password?
+          </Text>
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginHorizontal: 30,
+            marginTop: 30,
+          }}>
+          <View style={styles.view1}></View>
+          <Text style={styles.text2}>OR</Text>
+          <View style={styles.view1}></View>
+        </View>
+        <View style={{marginHorizontal: 10, marginTop: 20}}>
+          <SocialIcon
+            title="Sign in with Facebook"
+            button
+            type="facebook"
+            style={styles.SocialIcon}
+            onPress={() => {}}
+          />
+          <SocialIcon
+            title="Sign in with Google"
+            button
+            type="google"
+            style={styles.SocialIcon}
+            onPress={() => {}}
+          />
+        </View>
+        <View style={{marginLeft: 20, marginTop: 10}}>
+          <Text
+            style={{
+              ...styles.text1,
+              textDecorationLine: 'underline',
+            }}>
+            New on PhunFood?
+          </Text>
+        </View>
+        <View
+          style={{alignItems: 'flex-end', marginHorizontal: 20, marginTop: 10}}>
+          <Button
+            title={'Create an account'}
+            buttonStyle={styles.createButton}
+            titleStyle={styles.createButtonTitle}
+          />
+        </View>
+      </View>
+    );
 }
 const styles = StyleSheet.create({
     container: {
