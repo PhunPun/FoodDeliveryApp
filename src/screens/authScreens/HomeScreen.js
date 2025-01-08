@@ -2,12 +2,15 @@ import React from "react";
 import { useState, useRef } from "react";
 import { 
     View, 
-    Text, 
+    Text,
+    Image, 
     StyleSheet, 
     Dimensions, 
     TextInput,
     TouchableOpacity,
-    ScrollView
+    ScrollView,
+    FlatList,
+    Pressable
 } from "react-native";
 import { 
     Icon, 
@@ -22,10 +25,12 @@ import {
     fonts
 } from "../../global/style";
 import HomeHeader from "../../components/HomeHeader";
+import { filtterData } from "../../global/Data";
 
 export default function HomeScreen(){
     const [delivery, settDelivery] = useState(true)
     const [pickUp, setPickUp] = useState(false)
+    const [indexCheck, setIndexCheck] = useState("0")
     return(
         <View style={styles.container}>
             <HomeHeader/>
@@ -101,6 +106,42 @@ export default function HomeScreen(){
                 <View style={ styles.categoriView}>
                     <Text style={styles.categoriText}>Categories</Text>
                 </View>
+                <View>
+                    <FlatList
+                        horizontal ={true}
+                        showsHorizontalScrollIndicator ={false}
+                        data={filtterData}
+                        keyExtractor={(item) => item.id}
+                        extraData={indexCheck}
+                        renderItem={({item, index})=> (
+                            <Pressable 
+                                onPress={() => {
+                                    setIndexCheck(item.id)
+                                }}
+                            >
+                                <View style ={{
+                                    ...styles.smallCateView,
+                                    backgroundColor: indexCheck === item.id ? 
+                                                        colors.primary : colors.grey5
+                                    }}>
+                                    <Image
+                                        style={styles.smallCateImage}
+                                        source={item.image}
+                                    />
+                                    <View>
+                                        <Text style={{
+                                            ...styles.smallCateText,
+                                            color: indexCheck === item.id ? colors.selected : colors.doneSelect
+                                        }}>{item.name}</Text>
+                                    </View>
+                                </View>
+                            </Pressable>
+                        )}
+                    />
+                </View>
+                <View style={ styles.categoriView}>
+                    <Text style={styles.categoriText}>Free delivery now</Text>
+                </View>
             </ScrollView>
         </View>
     )
@@ -169,5 +210,23 @@ const styles = StyleSheet.create({
         color: colors.grey2,
         fontWeight: fonts.fontWeights.w7,
         marginLeft: 20
+    },
+    smallCateView: {
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 5,
+        width: 80,
+        height: 100,
+        margin: 10
+    },
+    smallCateImage: {
+        height: 60, 
+        width: 60,
+        borderRadius: 30,
+    },
+    smallCateText: {
+        fontSize: fonts.fontSizes.s11,
+        fontWeight: fonts.fontWeights.w2
     }
 })

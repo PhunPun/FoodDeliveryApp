@@ -12,7 +12,9 @@ export const colors ={
     headerText: 'white',
     primary: '#ff8c52',
     header: '#ff8c52',
-    nomal: 'white'
+    nomal: 'white',
+    selected: "white",
+    doneSelect: '#ff8c52'
 }
 export const fonts ={
     fontSizes: {
@@ -24,6 +26,10 @@ export const fonts ={
         s6: 20,
         s7: 18,
         s8: 16,
+        s9: 15,
+        s10: 14,
+        s11: 13,
+        s12: 12
     },
     fontWeights: {
         w1: 400,
