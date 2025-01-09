@@ -16,7 +16,8 @@ export const colors ={
     selected: "white",
     doneSelect: '#ff8c52',
     rateBackground: 'rgba(52, 52, 52,0.3)',
-    countDown: '#66DF48'
+    countDown: '#66DF48',
+    float: 'rgb(244, 239, 239)'
 }
 export const fonts ={
     fontSizes: {

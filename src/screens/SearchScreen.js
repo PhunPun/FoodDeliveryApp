@@ -24,7 +24,7 @@ import {
     parameters, 
     titles, 
     fonts
-} from "../../global/style";
+} from "../global/style";
 
 export default function SearchScreen(){
     return(

@@ -24,12 +24,12 @@ import {
     parameters, 
     titles, 
     fonts
-} from "../../global/style";
+} from "../global/style";
 
-export default function MyOrderScreen(){
+export default function RestaurantMapScreen(){
     return(
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <Text>Order screen</Text>
+            <Text>Res map screen</Text>
         </View>
     )
 }

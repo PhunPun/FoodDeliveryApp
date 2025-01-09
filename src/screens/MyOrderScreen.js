@@ -24,12 +24,12 @@ import {
     parameters, 
     titles, 
     fonts
-} from "../../global/style";
+} from "../global/style";
 
-export default function MyAccountScreen(){
+export default function MyOrderScreen(){
     return(
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <Text>My account screen</Text>
+            <Text>Order screen</Text>
         </View>
     )
 }
