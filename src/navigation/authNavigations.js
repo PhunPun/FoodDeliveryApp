@@ -6,6 +6,7 @@ import {
 import SignInWelcomeScreen from "../screens/authScreens/SignInWelcomeScreen";
 import SignInScreen from "../screens/authScreens/SignInScreen";
 import HomeScreen from "../screens/authScreens/HomeScreen";
+import AuthTabs from "./AuthTabs";
 
 const Auth = createNativeStackNavigator();
 export default function AuthStack(){
@@ -28,11 +29,10 @@ export default function AuthStack(){
                 }}
             />
             <Auth.Screen 
-                name ="HomeScreen"
-                component = {HomeScreen}
+                name ="AuthTabs"
+                component = {AuthTabs}
                 options ={{
-                    headerShown: false,
-                    
+                    headerShown: false,                    
                 }}
             />
         </Auth.Navigator>

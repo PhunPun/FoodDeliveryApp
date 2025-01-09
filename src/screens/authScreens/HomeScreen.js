@@ -153,7 +153,7 @@ export default function HomeScreen(){
               )}
             />
           </View>
-          <View style={{...styles.categoriView}}>
+          <View style={{...styles.categoriView, marginBottom: 10}}>
             <Text style={styles.categoriText}>Free delivery now</Text>
           </View>
           <View>
@@ -214,7 +214,7 @@ export default function HomeScreen(){
                 )}
             />
           </View>
-          <View style={{...styles.categoriView}}>
+          <View style={{...styles.categoriView, marginBottom: 10}}>
             <Text style={styles.categoriText}>Restaurants in your area</Text>
           </View>
           <View>

@@ -63,7 +63,7 @@ export default function RestaurantCard({
                     <Text style={styles.markerText}> {farAway} Km</Text>
                     </View>
                     <View style={styles.adressView}>
-                        <View style={{width: 1, backgroundColor: colors.grey1}}/>
+                        <View style={{width: 0.5, backgroundColor: colors.grey1}}/>
                         <Text style={styles.adressText}> {businessAddress} </Text>
                     </View>
                 </View>
