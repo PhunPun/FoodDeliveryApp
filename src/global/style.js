@@ -11,13 +11,15 @@ export const colors ={
     statusBar: '#ff8c52',
     headerText: 'white',
     primary: '#ff8c52',
+    inPrimary: 'white',
     header: '#ff8c52',
     nomal: 'white',
     selected: "white",
     doneSelect: '#ff8c52',
     rateBackground: 'rgba(52, 52, 52,0.3)',
     countDown: '#66DF48',
-    float: 'rgb(244, 239, 239)'
+    float: 'rgb(244, 239, 239)',
+    borderAvatar: 'rgba(142, 129, 129, 0.86)',
 }
 export const fonts ={
     fontSizes: {
