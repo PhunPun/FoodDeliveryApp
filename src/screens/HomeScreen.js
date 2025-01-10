@@ -39,7 +39,7 @@ export default function HomeScreen({navigation}){
 
     return (
       <View style={styles.container}>
-        <HomeHeader />
+        <HomeHeader navigation={navigation}/>
         <View style={styles.touchView}>
           <TouchableOpacity
             onPress={() => {

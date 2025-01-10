@@ -16,7 +16,7 @@ import {
 import * as Animatable from "react-native-animatable"
 import { colors, fonts, parameters } from "../global/style";
 
-export default function HomeHeader(){
+export default function HomeHeader({navigation}){
     const BadgeIcon = withBadge(0)(Icon)
     return (
       <View style={styles.header}>
@@ -26,6 +26,9 @@ export default function HomeHeader(){
             name="menu"
             color={colors.nomal}
             size={32}
+            onPress={() => {
+              navigation.toggleDrawer()
+            }}
           />
         </View>
         <View style={styles.view2}>
