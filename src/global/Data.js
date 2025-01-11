@@ -5,7 +5,12 @@ export const filtterData =[
     {name: "Nem nuong", image: require('../assets/filterNemNuong.png'), id: "3"},
     {name: "Bun dau", image: require('../assets/filterBunDau.png'), id: "4"},
     {name: "Banh mi", image: require('../assets/filterBanhMi.png'), id: "5"},
-    
+    {name: "Fast food", image: require('../assets/fillterFastFood.png'), id: "6"},
+    {name: "Pho", image: require('../assets/filterPho.png'), id: "7"},
+    {name: "Bun bo", image: require('../assets/filterBunBo.png'), id: "8"},
+    {name: "Nem nuong", image: require('../assets/filterNemNuong.png'), id: "9"},
+    {name: "Bun dau", image: require('../assets/filterBunDau.png'), id: "10"},
+    {name: "Banh mi", image: require('../assets/filterBanhMi.png'), id: "11"},
 ]
 
 export const restaurantsData = [
