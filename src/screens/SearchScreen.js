@@ -32,7 +32,7 @@ import { filtterData } from "../global/Data";
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
-export default function SearchScreen(){
+export default function SearchScreen({navigation}){
     return(
         <View style={{flex: 1}}>
             <SearchComponent/>
@@ -42,7 +42,11 @@ export default function SearchScreen(){
                     data={filtterData}
                     keyExtractor={item => item.id}
                     renderItem={({item}) => (
-                        <TouchableWithoutFeedback>
+                        <TouchableWithoutFeedback
+                            onPress={() => {
+                                navigation.navigate("SearchResultScreen", {item: item.name})
+                            }}
+                        >
                             <View style={styles.imageView}>
                                 <ImageBackground
                                     style={styles.image}
@@ -74,7 +78,11 @@ const Footer = () => {
                 data={filtterData}
                 keyExtractor={item => item.id}
                 renderItem={({item}) => (
-                    <TouchableWithoutFeedback>
+                    <TouchableWithoutFeedback
+                        onPress={() => {
+                            navigation.navigate("SearchResultScreen", {item: item.name})
+                        }}
+                    >
                         <View style={styles.imageView}>
                             <ImageBackground
                                 style={styles.image}

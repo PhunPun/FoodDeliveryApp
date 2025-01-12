@@ -34,7 +34,8 @@ export const fonts ={
         s9: 15,
         s10: 14,
         s11: 13,
-        s12: 12
+        s12: 12,
+        s13: 10
     },
     fontWeights: {
         w1: 400,

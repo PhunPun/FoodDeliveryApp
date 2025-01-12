@@ -1,19 +1,19 @@
-import React from "react";
-import { useState, useRef } from "react";
-import { 
-    View, 
-    Text,
-    Image, 
-    StyleSheet, 
-    Dimensions, 
-    TextInput,
-    TouchableOpacity,
-    ScrollView,
-    FlatList,
-    Pressable
-} from "react-native";
-import { 
-    Icon, 
+  import React from "react";
+  import { useState, useRef } from "react";
+  import { 
+      View, 
+      Text,
+      Image, 
+      StyleSheet, 
+      Dimensions, 
+      TextInput,
+      TouchableOpacity,
+      ScrollView,
+      FlatList,
+      Pressable
+  } from "react-native";
+  import { 
+      Icon, 
     Button, 
     SocialIcon,
 } from "react-native-elements";
@@ -30,6 +30,7 @@ import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import MyAccountScreen from "../screens/MyAccountScreen";
 import MyOrderScreen from "../screens/MyOrderScreen";
+import { ClientStack } from "./ClientStack";
 
 const TabsOfAuth = createBottomTabNavigator()
 
@@ -51,8 +52,8 @@ export default function AuthTabs(){
           }}
         />
         <TabsOfAuth.Screen
-          name="SearchScreen"
-          component={SearchScreen}
+          name="ClientStack"
+          component={ClientStack}
           options={{
             tabBarLabel: 'Search',
             tabBarIcon: ({color, size}) => (
