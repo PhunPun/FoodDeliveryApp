@@ -31,6 +31,7 @@ import {
 } from "@react-navigation/native-stack";
 import SearchScreen from "../screens/SearchScreen";
 import SearchResultScreen from "../screens/SearchResultScreen";
+import RestaurantHomeScreen from "../screens/RestaurantHomeScreen";
 
 const ClientSearch = createNativeStackNavigator()
 export function ClientStack(){
@@ -46,6 +47,13 @@ export function ClientStack(){
         <ClientSearch.Screen
           name="SearchResultScreen"
           component={SearchResultScreen}
+          options={() => ({
+            headerShown: false,
+          })}
+        />
+        <ClientSearch.Screen
+          name="RestaurantHomeScreen"
+          component={RestaurantHomeScreen}
           options={() => ({
             headerShown: false,
           })}
