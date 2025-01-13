@@ -5899,6 +5899,11 @@ react-native-gesture-handler@^2.21.2, "react-native-gesture-handler@>= 2.0.0":
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+react-native-pager-view@^6.6.1, "react-native-pager-view@>= 6.0.0":
+  version "6.6.1"
+  resolved "https://registry.npmjs.org/react-native-pager-view/-/react-native-pager-view-6.6.1.tgz"
+  integrity sha512-2dFulYs8JxEUecemv1PGWCUv+ZQuwSaQfFiSr2++KH8km5HzpuS8vJ3MVb0M6UhpqacFDj9OGe7z97ks/mr7gA==
+
 react-native-ratings@8.0.4:
   version "8.0.4"
   resolved "https://registry.npmjs.org/react-native-ratings/-/react-native-ratings-8.0.4.tgz"
@@ -5947,6 +5952,13 @@ react-native-swiper@^1.6.0:
   integrity sha512-OnkTTZi+9uZUgy0uz1I9oYDhCU3z36lZn+LFsk9FXPRelxb/KeABzvPs3r3SrHWy1aA67KGtSFj0xNK2QD0NJQ==
   dependencies:
     prop-types "^15.5.10"
+
+react-native-tab-view@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.npmjs.org/react-native-tab-view/-/react-native-tab-view-4.0.5.tgz"
+  integrity sha512-Xn3TpYo4yvKRC/f4+cOcvsXlitdnSaYkacshckrEI3JiDmFKNFIRVNxtZFggm4MwbJafq2RzuzR6xrgKoxgkTw==
+  dependencies:
+    use-latest-callback "^0.2.1"
 
 react-native-vector-icons@^10.2.0, react-native-vector-icons@>7.0.0:
   version "10.2.0"

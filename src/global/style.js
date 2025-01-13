@@ -20,6 +20,8 @@ export const colors ={
     countDown: '#66DF48',
     float: 'rgb(244, 239, 239)',
     borderAvatar: 'rgba(142, 129, 129, 0.86)',
+    deep: 'black',
+    pagebackground: 'rgba(131, 218, 225, 0.83)'
 }
 export const fonts ={
     fontSizes: {
@@ -45,6 +47,29 @@ export const fonts ={
         w5: 800,
         w6: 900,
         w7: 'bold',
+    },
+    ios: {
+        regular: 'System',
+        light: 'System',
+        lightItalic: 'System',
+        bold: 'System',
+        boldItalic: 'System',
+        black: 'System',
+        blackItalic: 'System',
+    },
+    android: {
+        regular: 'Roboto',
+        italic: 'Roboto-Italic',
+        thin: 'Roboto-Thin',
+        thinItalic: 'Roboto-ThinItalic',
+        light: 'Roboto-Light',
+        lightItalic: 'Roboto-LightItalic',
+        medium: 'Roboto-Medium',
+        mediumItalic: 'Roboto-MediumItalic',
+        bold: 'Roboto-Bold',
+        boldItalic: 'Roboto-BoldItalic',
+        condensed: 'RobotoCondensed-Regular',
+        condensedItalic: 'RobotoCondensed-Italic',
     }
 }
 
