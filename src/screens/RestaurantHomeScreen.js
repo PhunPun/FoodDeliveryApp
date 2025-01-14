@@ -29,6 +29,7 @@ import {TabView, TabBar} from 'react-native-tab-view'
 import RestaurantHeader from "../components/RestaurantHeader";
 import { restaurantsData } from "../global/Data";
 import { updateLoggerConfig } from "react-native-reanimated/lib/typescript/logger";
+import MenuScreen from "./RestaurantTabs/MenuScreen";
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 const initialLayout = SCREEN_WIDTH
@@ -131,7 +132,20 @@ const RestaurantHomeScreen = ({navigation,route}) => {
             tabBarPosition="top"
           />
         </View>
+        { index === 0 && 
+          <MenuScreen/>
+        }
       </ScrollView>
+      <TouchableOpacity>
+        <View style={styles.view11}>
+          <View style={styles.view12}>
+            <Text style={styles.text13}> View Cart </Text>
+            <View style={styles.view13}>
+              <Text style={styles.text13}>0</Text>
+            </View>
+          </View>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -141,7 +155,7 @@ export default RestaurantHomeScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    paddingTop: 20
+    paddingTop: 35
   },
   view1: {
     padding: 3,

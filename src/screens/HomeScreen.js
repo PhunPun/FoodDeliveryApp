@@ -10,7 +10,8 @@ import {
     TouchableOpacity,
     ScrollView,
     FlatList,
-    Pressable
+    Pressable,
+    StatusBar
 } from "react-native";
 import { 
     Icon, 
@@ -39,6 +40,11 @@ export default function HomeScreen({navigation}){
 
     return (
       <View style={styles.container}>
+        <StatusBar
+          translucent
+          barStyle={"light-content"}
+          backgroundColor={colors.primary}
+        />
         <HomeHeader navigation={navigation}/>
         <View style={styles.touchView}>
           <TouchableOpacity
@@ -256,6 +262,7 @@ export default function HomeScreen({navigation}){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 35
   },
   deliveryTouch: {
     paddingHorizontal: 15,

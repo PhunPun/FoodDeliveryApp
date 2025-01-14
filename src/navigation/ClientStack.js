@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { 
     View, 
     Text,
@@ -32,9 +32,20 @@ import {
 import SearchScreen from "../screens/SearchScreen";
 import SearchResultScreen from "../screens/SearchResultScreen";
 import RestaurantHomeScreen from "../screens/RestaurantHomeScreen";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 const ClientSearch = createNativeStackNavigator()
-export function ClientStack(){
+export function ClientStack({navigation, route}){
+
+  // useLayoutEffect(() => {
+  //   const routeName = getFocusedRouteNameFromRoute(route)
+  //   if(routeName === "RestaurantHoneScreen"){
+  //     navigation.setOption({tabBarVisible: false})
+  //   }else{
+  //     navigation.setOption({tabBarVisible: true})
+  //   }
+  // })
+
     return (
       <ClientSearch.Navigator>
         <ClientSearch.Screen

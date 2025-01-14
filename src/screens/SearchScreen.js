@@ -34,7 +34,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width
 
 export default function SearchScreen({navigation}){
     return(
-        <View style={{flex: 1}}>
+        <View style={{flex: 1, paddingTop: 35}}>
             <SearchComponent/>
             <View style={{marginTop: 10}}>
                 <FlatList
