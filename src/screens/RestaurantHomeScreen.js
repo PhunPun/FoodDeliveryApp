@@ -10,7 +10,8 @@ import {
     TouchableOpacity,
     ScrollView,
     FlatList,
-    Pressable
+    Pressable, 
+    Modal
 } from "react-native";
 import { 
     Icon, 
@@ -27,15 +28,20 @@ import {
 } from "../global/style";
 import {TabView, TabBar} from 'react-native-tab-view'
 import RestaurantHeader from "../components/RestaurantHeader";
-import { restaurantsData } from "../global/Data";
+import { restaurantsData, menu } from "../global/Data";
 import { updateLoggerConfig } from "react-native-reanimated/lib/typescript/logger";
 import MenuScreen from "./RestaurantTabs/MenuScreen";
+import {
+  Route1, Route2, 
+  Route3, Route4, 
+  Route5, Route6, 
+  Route7, Route8 
+} from "./RestaurantTabs/MenuTab";
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 const initialLayout = SCREEN_WIDTH
 
 const RestaurantHomeScreen = ({navigation,route}) => {
-
   const {id, restaurant} = route.params
   const [routes] = useState([
     {key: "first", title: "MENU"},
@@ -57,6 +63,9 @@ const RestaurantHomeScreen = ({navigation,route}) => {
     />
   )
   const UpdateRoute1 = () => {
+  }
+  const menuPressed = () => {
+    navigation.navigate("MenuProductScreen")
   }
   return (
     <View style={styles.container}>
@@ -132,8 +141,8 @@ const RestaurantHomeScreen = ({navigation,route}) => {
             tabBarPosition="top"
           />
         </View>
-        { index === 0 && 
-          <MenuScreen/>
+        {index === 0 && 
+          <MenuScreen onPress={menuPressed}  />
         }
       </ScrollView>
       <TouchableOpacity>
@@ -146,6 +155,7 @@ const RestaurantHomeScreen = ({navigation,route}) => {
           </View>
         </View>
       </TouchableOpacity>
+      
     </View>
   );
 }

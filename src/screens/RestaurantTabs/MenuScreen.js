@@ -20,16 +20,13 @@ import {
 } from "../../global/style";
 import { menuData, specialData } from "../../global/Data";
 
-const MenuScreen = ({navigation, restaurant}) => {
-  const handlePress = () => {
-    //navigation.navigate("ProductScreen")
-  };
+const MenuScreen = ({navigation, restaurant, onPress}) => {
   return (
     <View style={styles.container}>
       <View>
         {specialData.map(item => (
           <View key={item.key} style={styles.view1}>
-            <TouchableOpacity onPress={handlePress}>
+            <TouchableOpacity onPress={onPress}>
               <View style={styles.view2}>
                 <Icon
                     type="material-community"
@@ -45,7 +42,7 @@ const MenuScreen = ({navigation, restaurant}) => {
       <View>
         {menuData.map(item => (
           <View key={item.key} style={styles.view1}>
-            <TouchableOpacity onPress={handlePress}>
+            <TouchableOpacity onPress={onPress}>
               <View style={styles.view2}>
                 <Text style={styles.text1}>{item.title}</Text>
               </View>
