@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1029674192111",
+    "project_id": "phunfood-7d432",
+    "storage_bucket": "phunfood-7d432.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029674192111:android:85583e32f4ad0cf78e5f1a",
+        "android_client_info": {
+          "package_name": "com.fooddeliveryapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB9kBQhAF1i04F5ODjjKB_gssZT35vUWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
